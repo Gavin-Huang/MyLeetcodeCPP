@@ -116,6 +116,83 @@ public:
 		 return true;
 		 
 	 }
+
+
+    //217. Contains Duplicate
+	//Given an array of integers, find if the array contains any duplicates. 
+	//Your function should return true if any value appears at least twice in the array,
+	//and it should return false if every element is distinct.
+    //Subscribe to see which companies asked this question.
+	bool containsDuplicate(vector<int>& nums)
+	{
+        map<int,int>  my_Map;
+		for (int i = 0; i < nums.size(); i++)
+		{
+			if(my_Map.find( nums[i] ) != my_Map.end())
+			{
+				return true;
+			}
+			else
+			{
+				my_Map.insert(pair<int,int>(nums[i],0));
+			}
+		}
+		return false;
+    }
+	//219. Contains Duplicate II
+	//Given an array of integers and an integer k,
+	//find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the absolute difference between i and j is at most k.
+    //Subscribe to see which companies asked this question.
+	bool containsNearbyDuplicate(vector<int>& nums, int k)
+	{
+        map<int,int>  my_Map;
+		for (int i = 0; i < nums.size(); i++)
+		{
+			if(my_Map.find( nums[i] ) != my_Map.end())
+			{
+				if(i-my_Map[nums[i]]<=k)
+					return true;
+				else
+				{
+					 my_Map[nums[i]]=i;
+				}
+			}
+			else
+			{
+				my_Map.insert(pair<int,int>(nums[i],i));
+			}
+		}
+		return false;
+    }
+	    //220. Contains Duplicate III
+	    /*Given an array of integers,
+		find out whether there are two distinct indices i and j in the array 
+		such that the absolute difference between nums[i] and nums[j] is at most t 
+		and the absolute difference between i and j is at most k.
+        Subscribe to see which companies asked this question.*/
+	    bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) 
+		{
+		map<int,int>  my_Map;
+		bool IsInthere=false;
+		for (int i = 0; i < nums.size(); i++)
+		{
+			int Num=nums[i];
+			IsInthere=false;
+			for (int p = -t; p <=t; p++)
+			{
+				if(my_Map.find(Num+p)!=my_Map.end())
+				{
+					if(i-my_Map[Num+p]<=k) return true;
+					else
+					{
+						my_Map.insert(pair<int,int>(nums[i],i));
+					}
+					break;
+				}
+			}
+		}
+		return false;
+        }
 };
 
 #endif
