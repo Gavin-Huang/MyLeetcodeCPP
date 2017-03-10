@@ -27,6 +27,9 @@
     <ClInclude Include="NO476.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="NO220.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
