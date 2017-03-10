@@ -172,23 +172,72 @@ public:
         Subscribe to see which companies asked this question.*/
 	    bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) 
 		{
-		map<int,int>  my_Map;
-		bool IsInthere=false;
+	    vector<vector<long int>> my_Map;
+		//map<long int,int>  my_Map;
+		long int Long_t =t;
+        
 		for (int i = 0; i < nums.size(); i++)
 		{
-			int Num=nums[i];
-			IsInthere=false;
-			for (int p = -t; p <=t; p++)
-			{
-				if(my_Map.find(Num+p)!=my_Map.end())
+			long int Num=nums[i];
+			//for (int p = -t; p <=t; p++)
+			//{
+			//	if(my_Map.find(Num+p)!=my_Map.end())
+			//	{
+			//		if(i-my_Map[Num+p]<=k) return true;
+			//	}
+			//}
+			int Size=my_Map.size();
+			std::vector<vector<long int>>::iterator it;
+			std::vector<vector<long int>>::iterator begin=my_Map.begin();
+			std::vector<vector<long int>>::iterator end=my_Map.end();
+			int isover=false;
+			while (!isover&&!begin->empty()&&!end->empty())
+			{   
+				it=begin;
+				if(abs((*it)[0]-Num)<=Long_t&&i-(*it)[1]<=k)
 				{
-					if(i-my_Map[Num+p]<=k) return true;
-					else
-					{
-						my_Map.insert(pair<int,int>(nums[i],i));
-					}
-					break;
+					return true;
 				}
+				it=end;
+				if(abs((*it)[0]-Num)<=Long_t&&i-(*it)[1]<=k)
+				{
+					return true;
+				}
+				if(Num<(*(begin+Size/2))[0])
+				{
+					end=begin+Size/2;
+					Size=Size/2;
+				}
+				else
+				{
+					begin=begin+Size/2;
+					Size=Size/2;
+				}
+				if(Size==1)
+				{
+					isover=true;
+				}
+			}
+	    /*	for (it=my_Map.begin(); it!=my_Map.end(); )
+			{   
+				if(abs(it->first-Num)<=Long_t&&i-it->second<=k)
+				{
+					return true;
+				}
+				
+			}*/
+			if(!it->empty())
+			{
+			if((*it)[0]==Num)
+			{
+				(*it)[1]=i;
+			}
+			else
+			{   vector<long int> temp;
+			temp.insert(temp.end(),Num);
+			temp.insert(temp.end(),i);
+				my_Map.insert(it,temp);
+			}
 			}
 		}
 		return false;

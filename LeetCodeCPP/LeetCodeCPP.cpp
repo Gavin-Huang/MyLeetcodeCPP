@@ -5,12 +5,15 @@
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
-{   int i=0;
-	while(cin>>i)
-	{
-	Solution* g=new Solution();
-	cout<<g->findComplement(i)<<endl;
-	}
+{  
+	//while(cin>>i)
+	//{
+	//Solution* g=new Solution();
+	//cout<<g->findComplement(i)<<endl;
+	//}
+int i =2147483647;
+cout<<i<<endl;
+cout<<(i+1)<<endl;
 	system("pause");
 	return 0;
 }
