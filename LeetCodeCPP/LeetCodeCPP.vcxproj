@@ -79,10 +79,25 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DPNO321.h" />
+    <ClInclude Include="NO118.h" />
+    <ClInclude Include="NO119.h" />
+    <ClInclude Include="NO167.h" />
     <ClInclude Include="NO220.h" />
+    <ClInclude Include="NO321.h" />
+    <ClInclude Include="NO344.h" />
+    <ClInclude Include="NO345.h" />
+    <ClInclude Include="NO352.h" />
+    <ClInclude Include="NO412.h" />
+    <ClInclude Include="NO448.h" />
     <ClInclude Include="NO476.h" />
+    <ClInclude Include="NO520.h" />
+    <ClInclude Include="NO530.h" />
+    <ClInclude Include="NO532.h" />
+    <ClInclude Include="NO78.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LeetCodeCPP.cpp" />

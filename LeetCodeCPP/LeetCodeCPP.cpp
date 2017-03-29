@@ -2,18 +2,35 @@
 //
 
 #include "stdafx.h"
+#include"NO345.h"
+#include"NO321.h"
+#include<math.h>
+#include<iostream>
+#include<iomanip>
+#include<algorithm>
+#include <memory>
+#include<set>
 using namespace std;
+//#define Fun1(a,b) a+b
+//#define Fun2(a,b) *b+a
+//#define Fun3(a,b) a^b
+//#define Fun4(a,b) a-b
+//int nA=1;
+//int nB=2;
+//int nFun=Fun1(nA,nB)Fun2(nA,nB)-Fun3(nA,nB)*Fun4(nA,nB);
 
 int _tmain(int argc, _TCHAR* argv[])
 {  
-	//while(cin>>i)
-	//{
-	//Solution* g=new Solution();
-	//cout<<g->findComplement(i)<<endl;
-	//}
-int i =2147483647;
-cout<<i<<endl;
-cout<<(i+1)<<endl;
+	set<int> result;
+	int n;
+	cin>>n;
+	while (n--)
+	{   
+		cin>>n;
+		result.insert(n);
+
+	}
+
 	system("pause");
 	return 0;
 }

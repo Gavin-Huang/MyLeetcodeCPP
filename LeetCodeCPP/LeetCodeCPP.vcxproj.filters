@@ -30,6 +30,51 @@
     <ClInclude Include="NO220.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="NO344.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO345.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO352.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO321.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO118.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO119.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO167.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO530.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO532.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO78.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO412.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DPNO321.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO448.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NO520.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
